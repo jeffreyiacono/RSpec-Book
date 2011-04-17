@@ -92,8 +92,9 @@
 #    "<Employee: #{@name}>"
 #  end
 #
-#  def initialize(name, boss = nil)
-#    @name, @boss = name, boss
+#  def initialize(name, opts = {})
+#    @name = name
+#    @boss = opts[:boss]
 #  end
 #
 #  def reports_to?(boss)
@@ -104,7 +105,7 @@
 #describe "employee with a boss" do
 #  it "should report to the boss" do
 #    boss     = Employee.new("Beatrice")
-#    employee = Employee.new("Joe", boss)
+#    employee = Employee.new("Joe", :boss => boss)
 #    employee.should report_to(boss)
 #  end
 #end
