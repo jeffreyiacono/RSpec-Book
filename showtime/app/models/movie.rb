@@ -1,4 +1,7 @@
 class Movie < ActiveRecord::Base
+  has_many :categories
+  has_many :genres, :through => :categories
+
   def showtime
     "#{formatted_date} (#{formatted_time})"
   end

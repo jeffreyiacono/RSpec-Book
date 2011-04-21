@@ -10,13 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110420020707) do
+ActiveRecord::Schema.define(:version => 20110422180934) do
+
+  create_table "categories", :force => true do |t|
+    t.integer  "genre_id"
+    t.integer  "movie_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "movies", :force => true do |t|
     t.date     "showtime_date"
     t.time     "showtime_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.integer  "release_year"
   end
 
 end
