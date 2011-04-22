@@ -105,6 +105,7 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.5.0)
     rubyzip (0.9.4)
+    selenium-client (1.2.18)
     selenium-webdriver (0.1.4)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
@@ -134,5 +135,6 @@ DEPENDENCIES
   database_cleaner
   rails (= 3.0.7)
   rspec-rails
+  selenium-client
   sqlite3-ruby
   webrat

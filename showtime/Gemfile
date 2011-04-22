@@ -8,4 +8,5 @@ group :development, :test do
   gem "webrat"
   gem "capybara"
   gem "database_cleaner"
+  gem "selenium-client"
 end
